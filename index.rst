@@ -1,6 +1,8 @@
 
 Библиотеки/Модули
 =================
+
+
 Requests
 """""""""""""""""
 Библиотека **requests** является стандартным инструментом для составления HTTP-запросов в Python. Простой и аккуратный API значительно облегчает трудоемкий процесс создания запросов. Таким образом, можно сосредоточиться на взаимодействии со службами и использовании данных в приложении.
@@ -50,6 +52,33 @@ Tkinter предлагает более 15 типов виджетов, вклю
     https://docs.python.org/3/library/tkinter.html
 
 
+
+
+Wikipedia API
+"""""""""""""""""
+
+Основная цель Wikipedia-API  - предоставить простой и легкий в использовании API для получения информации из Википедии.
+Wikipedia API поддерживает множество операций, таких как извлечение текста, ссылок, содержимого, резюме и т. Д. Из Википедии.
+
+
+.. code:: python
+
+    import wikipedia
+    wikipedia.set_lang('ru') // установка языка
+    print(wikipedia.summary("Линус Торвальдс")) // получение краткой информации
+
+    complete_url = wikipedia.page ("Линус Торвальдс") // получение ссылки статьи
+    print(complete_url.url)
+
+.. image:: https://i.imgur.com/lGZWSWA.png
+
+**Документация** 
+
+https://github.com/goldsmith/Wikipedia
+
+https://wikipedia-api.readthedocs.io/en/latest/README.html - расширенный API
+
+
 BeautifulSoup
 """""""""""""""""
 BeautifulSoup является библиотекой Python для парсинга HTML и XML документов. Часто используется для скрапинга веб-страниц. BeautifulSoup позволяет трансформировать сложный HTML-документ в сложное древо различных объектов Python. Это могут быть теги, навигация или комментарии.
@@ -81,8 +110,9 @@ BeautifulSoup является библиотекой Python для парсин
 
 https://www.crummy.com/software/BeautifulSoup/bs4/doc/
 
+
 PrettyTable
-===============
+"""""""""""""""
 PrettyTable предназначена для создания таблицы выходных данных в красивом формате. Имеется функция импорта CSV-форматов.
 
 **Пример:**
@@ -125,3 +155,9 @@ https://ptable.readthedocs.io/en/latest/tutorial.html
     print(t.string)
 
 **result** +22 °C
+
+
+
+
+
+
