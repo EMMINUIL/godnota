@@ -43,4 +43,21 @@ Tkinter предлагает более 15 типов виджетов, вклю
     lbl = Label(window, text="Привет")  
     lbl.grid(column=0, row=0)  
     window.mainloop()
-    
+
+.. image:: https://pythonru.com/wp-content/uploads/2019/01/uroki-po-tkinter-2.png
+
+**Документация**:
+    https://docs.python.org/3/library/tkinter.html
+
+
+BeautifulSoup
+"""""""""""""""""
+BeautifulSoup является библиотекой Python для парсинга HTML и XML документов. Часто используется для скрапинга веб-страниц. BeautifulSoup позволяет трансформировать сложный HTML-документ в сложное древо различных объектов Python. Это могут быть теги, навигация или комментарии.
+
+
+.. code:: python
+
+    import requests
+    from bs4 import BeautifulSoup
+    req = requests.get('https://en.wikipedia.org/wiki/Python_(programming_language)')
+    soup = BeautifulSoup(req.text, "html")
