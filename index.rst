@@ -76,3 +76,52 @@ BeautifulSoup является библиотекой Python для парсин
     print(t.string)
 
 **result** +22 °C
+
+**Документация:**
+
+https://www.crummy.com/software/BeautifulSoup/bs4/doc/
+
+PrettyTable
+===============
+PrettyTable предназначена для создания таблицы выходных данных в красивом формате. Имеется функция импорта CSV-форматов.
+
+**Пример:**
+
+.. code:: python
+    from prettytable import PrettyTable
+    table = PrettyTable()
+    
+    table.field_names = ['Name', 'Age', 'City']
+    table.add_row(["Alice", 20, "Adelaide"])
+    table.add_row(["Bob", 20, "Brisbane"])
+    table.add_row(["Chris", 20, "Cairns"])
+    table.add_row(["David", 20, "Sydney"])
+    table.add_row(["Ella", 20, "Melbourne"])
+    print(table)
+
+.. image:: https://leonardo.osnova.io/47911dd7-1c6c-a659-1c9f-e327ac6c4169/-/resize/500/
+    :width: 350 px
+   
+**Документация:**
+
+https://ptable.readthedocs.io/en/latest/tutorial.html
+.. image:: https://i.imgur.com/lhaQJGT.png
+
+
+.. image:: https://i.imgur.com/svv0vMc.png
+
+
+
+
+
+.. code:: python
+
+    import requests
+    from bs4 import BeautifulSoup
+    
+    page = requests.get('https://pogoda.online.ua/in/moscow/')
+    soup = BeautifulSoup(page.text, "html.parser")
+    t = soup.find('span', class_='supernew-temp-max mb-0 h1 deg')
+    print(t.string)
+
+**result** +22 °C
