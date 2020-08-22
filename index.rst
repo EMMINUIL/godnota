@@ -54,10 +54,25 @@ BeautifulSoup
 """""""""""""""""
 BeautifulSoup является библиотекой Python для парсинга HTML и XML документов. Часто используется для скрапинга веб-страниц. BeautifulSoup позволяет трансформировать сложный HTML-документ в сложное древо различных объектов Python. Это могут быть теги, навигация или комментарии.
 
+**Пример:**
+
+.. image:: https://i.imgur.com/lhaQJGT.png
+
+
+.. image:: https://i.imgur.com/svv0vMc.png
+
+
+
+
 
 .. code:: python
 
     import requests
     from bs4 import BeautifulSoup
-    req = requests.get('https://en.wikipedia.org/wiki/Python_(programming_language)')
-    soup = BeautifulSoup(req.text, "html")
+    
+    page = requests.get('https://pogoda.online.ua/in/moscow/')
+    soup = BeautifulSoup(page.text, "html.parser")
+    t = soup.find('span', class_='supernew-temp-max mb-0 h1 deg')
+    print(t.string)
+
+**result** +22 °C
