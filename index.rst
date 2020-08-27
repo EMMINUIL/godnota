@@ -64,10 +64,10 @@ Wikipedia API поддерживает множество операций, та
 .. code:: python
 
     import wikipedia
-    wikipedia.set_lang('ru') // установка языка
-    print(wikipedia.summary("Линус Торвальдс")) // получение краткой информации
+    wikipedia.set_lang('ru') # установка языка
+    print(wikipedia.summary("Линус Торвальдс")) # получение краткой информации
 
-    complete_url = wikipedia.page ("Линус Торвальдс") // получение ссылки статьи
+    complete_url = wikipedia.page ("Линус Торвальдс") # получение ссылки статьи
     print(complete_url.url)
 
 .. image:: https://i.imgur.com/lGZWSWA.png
